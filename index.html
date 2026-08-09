@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCSTORM — Minecraft SMP</title>
+<meta name="description" content="MCSTORM Minecraft SMP — Join the storm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-grid"></div><div class="orb orb-1"></div><div class="orb orb-2"></div>
+
+<header class="nav">
+  <a class="brand" href="#home"><span class="bolt">⚡</span> MC<span>STORM</span></a>
+  <nav><a href="#home">Home</a><a href="#features">Features</a><a href="#ranks">Ranks</a><a href="#rules">Rules</a><a href="#join">Join</a></nav>
+  <a class="nav-btn" href="#join">PLAY NOW</a>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="badge"><span></span> MINECRAFT SURVIVAL SMP</div>
+  <h1>ENTER THE <strong>STORM</strong></h1>
+  <p class="hero-text">A next-level Minecraft survival experience. Build, fight, explore and make your mark on MCSTORM.</p>
+
+  <div class="server-card">
+    <div><div class="label">SERVER ADDRESS</div><div class="ip">Mc-storm.aternos.me:<b>59703</b></div></div>
+    <button class="copy-btn" onclick="copyIP()">COPY IP</button>
+  </div>
+  <div id="copyMsg" class="copy-msg">IP copied to clipboard!</div>
+
+  <div class="status-card">
+    <span id="statusDot" class="status-dot loading"></span>
+    <div><b id="statusText">Checking server...</b><small id="playerText">Please wait</small></div>
+    <button class="refresh" onclick="checkServer()">↻</button>
+  </div>
+
+  <div class="hero-actions">
+    <a class="primary-btn" href="#join">⚡ HOW TO JOIN</a>
+    <a class="secondary-btn" href="#features">EXPLORE SERVER</a>
+  </div>
+</section>
+
+<section class="stats">
+  <div><b id="statPlayers">—</b><span>Players Online</span></div>
+  <div><b>1.21+</b><span>Minecraft</span></div>
+  <div><b>SMP</b><span>Game Mode</span></div>
+  <div><b>∞</b><span>Possibilities</span></div>
+</section>
+
+<section id="features" class="section">
+  <div class="section-tag">WHY MCSTORM?</div><h2>BUILT FOR <span>ADVENTURE.</span></h2>
+  <div class="cards">
+    <article class="card"><div class="icon">⚔</div><h3>Survival SMP</h3><p>Start your journey, gather resources and build your own story.</p></article>
+    <article class="card"><div class="icon">🌌</div><h3>Epic World</h3><p>Explore a world full of places to discover and adventures to create.</p></article>
+    <article class="card"><div class="icon">🏆</div><h3>Community</h3><p>Play with other members, compete and become part of the storm.</p></article>
+    <article class="card"><div class="icon">🛡</div><h3>Fair Play</h3><p>Enjoy a clean survival experience with fair rules for everyone.</p></article>
+    <article class="card"><div class="icon">🔥</div><h3>Epic Events</h3><p>Leave room for future events, competitions and server activities.</p></article>
+    <article class="card"><div class="icon">💜</div><h3>MCSTORM Community</h3><p>Meet players, make friends and grow with the server.</p></article>
+  </div>
+</section>
+
+<section id="ranks" class="section">
+  <div class="section-tag">RANKS & STORE</div><h2>CHOOSE YOUR <span>RANK.</span></h2>
+  <p class="section-intro">Ranks are shown as a store-ready section. Add your real prices and purchase links later.</p>
+  <div class="rank-grid">
+    <article class="rank"><div class="rank-icon">✦</div><h3>VIP</h3><p>Starter premium rank</p><ul><li>VIP tag</li><li>Special chat color</li><li>Extra perks</li></ul><button class="rank-btn" onclick="storeAlert()">COMING SOON</button></article>
+    <article class="rank featured"><div class="popular">POPULAR</div><div class="rank-icon">◆</div><h3>MVP</h3><p>Power up your journey</p><ul><li>MVP tag</li><li>Extra commands</li><li>Exclusive perks</li></ul><button class="rank-btn" onclick="storeAlert()">COMING SOON</button></article>
+    <article class="rank"><div class="rank-icon">♛</div><h3>LEGEND</h3><p>For the true storm legends</p><ul><li>Legend tag</li><li>Premium perks</li><li>Special benefits</li></ul><button class="rank-btn" onclick="storeAlert()">COMING SOON</button></article>
+  </div>
+</section>
+
+<section id="rules" class="section rules-section">
+  <div class="section-tag">SERVER RULES</div><h2>PLAY <span>FAIR.</span></h2>
+  <div class="rules">
+    <div><b>01</b><p><strong>Respect everyone</strong><br>Keep the community friendly and welcoming.</p></div>
+    <div><b>02</b><p><strong>No cheating</strong><br>No hacks, exploits or unfair advantages.</p></div>
+    <div><b>03</b><p><strong>No griefing</strong><br>Respect other players' builds and progress.</p></div>
+    <div><b>04</b><p><strong>Have fun</strong><br>Enjoy the server and help make MCSTORM better.</p></div>
+  </div>
+</section>
+
+<section id="join" class="join-section">
+  <div class="join-box">
+    <div class="section-tag">READY?</div><h2>JOIN THE <span>STORM.</span></h2>
+    <p>Copy the server address, open Minecraft and start your adventure.</p>
+    <div class="join-ip">Mc-storm.aternos.me:59703</div>
+    <div class="join-buttons">
+      <button class="primary-btn big" onclick="copyIP()">COPY SERVER IP</button>
+      <a class="discord-btn" href="#" onclick="discordPlaceholder(event)">💬 JOIN DISCORD</a>
+    </div>
+    <p class="hint">Discord invite can be added later in <b>script.js</b>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="brand">⚡ MC<span>STORM</span></div>
+  <p>© 2026 MCSTORM. All rights reserved.</p>
+  <p class="disclaimer">Not affiliated with Mojang Studios or Microsoft.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
