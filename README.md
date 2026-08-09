@@ -8,4 +8,4 @@ Files:
 
 Server: Mc-storm.aternos.me:59703
 
-To add Discord, edit `DISCORD_URL` in script.js.
+To add Discord, edit `https://discord.gg/rzrBrVTN5` in script.js.
